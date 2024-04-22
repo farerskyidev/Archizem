@@ -7,9 +7,11 @@
     <div class="container">
         <div class="footer__wrap">
             <div class="footer_img">
-                <?php if ( $footer_logo = get_field( 'footer_logo', 'options' ) ):
+                <a href="<?php echo home_url('/'); ?>"><?php if ( $footer_logo = get_field( 'footer_logo', 'options' ) ):
                     echo wp_get_attachment_image( $footer_logo['id'], 'small' );
-                endif; ?>
+                endif; ?></a> 
+                
+
             </div>
             <?php  
                 wp_nav_menu(
